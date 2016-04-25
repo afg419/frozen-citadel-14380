@@ -2,10 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import updater from "../updater";
 import GameHelper from "./helpers/game-helper";
+import spelling from "spelling";
+import dictionary from "../en_US";
 
 var Game = React.createClass({
   getInitialState(){
-    return { letters: [], letterObject: {}, enteredWords: [], gh: new GameHelper()};
+    return { letters: [], letterObject: {}, enteredWords: [], gh: new GameHelper(), dict: new spelling(dictionary) };
   },
 
   componentDidMount(){
@@ -19,10 +21,9 @@ var Game = React.createClass({
     if(event.keyCode == 13){
       var inputString = (this.refs.wordInput.value);
       var inputObj = this.state.gh.createLettersObject(inputString.split(""));
-
       if(!this.state.gh.compareLetterObjects(inputObj, this.state.letterObject)){
         this.props.setMainState({message: "You can only use the letters above!"});
-      } else if (!true){
+      } else if (!this.state.dict.lookup(inputString).found){
         this.props.setMainState({message: "That doesn't look like a word..."});
       } else if (this.state.gh.isRepeat(inputString, this.props.enteredWords)) {
         this.props.setMainState({message: "Only once per word please"});
