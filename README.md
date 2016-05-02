@@ -11,7 +11,7 @@ An Elixir on Phoenix multiplayer word descrambling game.  Make an account and jo
 
 ## For developers
 
- * Clone this repo `$git clone https://github.com/afg419/frozen-citadel-14380.git`
+ * Clone this repo `git clone https://github.com/afg419/frozen-citadel-14380.git`
  * Install dependencies with `mix deps.get`
  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
  * Install Node.js dependencies with `npm install`
