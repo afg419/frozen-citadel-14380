@@ -1,4 +1,17 @@
-# WordScram
+# WordScram  
+
+An Elixir on Phoenix multiplayer word descrambling game.  Make an account and join countless other players race to make words out of randomly generated letters.  Websockets allow for real time data about current players and scoring.
+
+### Link to the Deployed App
+[WordScram!](https://frozen-citadel-14380.herokuapp.com/)
+
+### Screenshot 
+![Imgur](http://i.imgur.com/k4u6sZL.png?1)
+
+
+## For developers
+
+Clone this repo `git clone 
 
 To start your Phoenix app:
 
@@ -9,12 +22,3 @@ To start your Phoenix app:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: http://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
